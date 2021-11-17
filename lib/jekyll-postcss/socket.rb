@@ -54,7 +54,7 @@ module PostCss
 
     def start_dev_server
       Thread.new do
-        cmd = "#{START_SCRIPT} #{POSTCSS_SCRIPT} --development"
+        cmd = "#{POSTCSS_SCRIPT} --development"
         puts cmd
         system cmd
       end
