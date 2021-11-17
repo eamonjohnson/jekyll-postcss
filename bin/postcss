@@ -31,7 +31,7 @@ class PostCSS {
       throw err;
     });
 
-    server.listen(8124, () => {
+    server.listen(8124, '0.0.0.0', () => {
       console.log("PostCSS Server listening on port 8124...");
     });
   }
