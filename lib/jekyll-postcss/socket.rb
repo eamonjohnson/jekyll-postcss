@@ -54,7 +54,9 @@ module PostCss
 
     def start_dev_server
       Thread.new do
-        system "#{START_SCRIPT} #{POSTCSS_SCRIPT} --development"
+        cmd = "#{START_SCRIPT} #{POSTCSS_SCRIPT} --development"
+        puts cmd
+        system cmd
       end
 
       attempts = 0
