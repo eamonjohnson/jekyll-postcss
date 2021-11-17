@@ -16,6 +16,7 @@ class PostCSS {
   }
 
   static startServer() {
+    console.log("Starting the PostCSS Server!")
     const server = net.createServer((c) => {
       c.on("data", (data) => {
         this.process(data, function (result) {

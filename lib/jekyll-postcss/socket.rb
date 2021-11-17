@@ -10,7 +10,7 @@ module PostCss
     POSTCSS_SCRIPT = File.expand_path("../../bin/postcss", __dir__)
 
     def initialize
-      start_dev_server if development?
+      start_dev_server #if development?
     end
 
     def write(data)
@@ -59,13 +59,13 @@ module PostCss
       attempts = 0
       @postcss =
         begin
-          TCPSocket.open("0.0.0.0", 8124) 
+          TCPSocket.open("0.0.0.0", 8124)
         rescue StandardError => e
           attempts = attempts + 1
 
           if attempts < MAX_ATTEMPTS
             sleep 0.1
-            retry 
+            retry
           else
             raise "Could not connect to the PostCSS server"
           end
