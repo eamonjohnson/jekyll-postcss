@@ -59,7 +59,7 @@ module PostCss
       attempts = 0
       @postcss =
         begin
-          TCPSocket.open("localhost", 8124) 
+          TCPSocket.open("0.0.0.0", 8124) 
         rescue StandardError => e
           attempts = attempts + 1
 
