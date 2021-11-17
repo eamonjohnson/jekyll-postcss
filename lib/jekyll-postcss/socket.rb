@@ -47,6 +47,7 @@ module PostCss
       @env ||= Jekyll.env
 
       @env == "development"
+      true
     end
 
     MAX_ATTEMPTS = 100
