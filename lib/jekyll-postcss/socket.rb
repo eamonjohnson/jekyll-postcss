@@ -50,7 +50,7 @@ module PostCss
       true
     end
 
-    MAX_ATTEMPTS = 100
+    MAX_ATTEMPTS = 10000
 
     def start_dev_server
       Thread.new do
